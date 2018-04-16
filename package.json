@@ -1,0 +1,22 @@
+{
+  "name": "tx-ai-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuangchuming/tx-ai-utils.git"
+  },
+  "author": "zhuangchuming <522236495@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhuangchuming/tx-ai-utils/issues"
+  },
+  "homepage": "https://github.com/zhuangchuming/tx-ai-utils#readme",
+  "dependencies": {
+    "tencent-ai-sign": "^1.0.2"
+  }
+}
