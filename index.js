@@ -36,7 +36,10 @@ function getParams(base64){
 
 /***
 OCR,获取照片内容
-base64
+base64:不包含image头部的base64内容
+测试：
+	与MAC命令下的base64执行后的结果一致即可
+	eg: base64 1.jpg
 ***/
 async function getOCRContent(base64){
 	let params = getParams(base64);
@@ -59,10 +62,11 @@ async function getOCRContent(base64){
 			}
 		}
 	}
-	if(!data){
-		console.log('error',status,data,error)
+	if(!data||error){
+		console.log('error',error)
+		return null;
 	}
-	return ocr_txdeal(data);
+	return ocr_txdeal(data.data);
 }
 
 function ocr_txdeal(obj){
